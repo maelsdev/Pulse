@@ -1,0 +1,29 @@
+.button {
+  width: 153px;
+  height: 32px;
+  left: 0px;
+  top: 0px;
+  background: #c70101;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  &_main {
+    width: 300px;
+    height: 50px;
+    background: #c70101;
+    font-size: 16px;
+    margin-top: 65px;
+  }
+  &_consultation {
+    width: 303px;
+    height: 55px;
+    background: #c70101;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 11px;
+  }
+}
