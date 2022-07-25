@@ -40,6 +40,32 @@ $(document).ready(function () {
 
   toggleClass('.catalog-item__link');
   toggleClass('.catalog-item__back');
+
+  //Modal
+$('[data-modal=consultation]').on('click', function () { 
+  $('.overlay,#consultation').fadeIn()
+})
+$('.modal__close').on('click', function () { 
+  $('.overlay,#consultation,#thanks,#order').fadeOut()
+})
+
+$('.button_mini').on('click', function () { 
+  $('.overlay,#order').fadeIn()
+})
+
+$('.button_mini').each(function (i) { 
+  $(this).on('click', function () { 
+    $('#order .modal__subtitle').text($('.catalog-item__title').eq(i).text())
+  })
+})
+
+// $('.button_consultation').on('click', function () {
+//   $('.overlay,#thanks').fadeIn()
+// })
+
+  $('.button_consultation').on('click', function () { 
+    $('#order').fadeOut()
+})
 });
 
 
