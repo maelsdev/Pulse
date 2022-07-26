@@ -5,8 +5,11 @@
   &_consultation {
     display: block;
     width: 303px;
-    height: 258px;
+    min-height: 258px;
     margin-top: 36px;
+    label {
+      color: red;
+    }
     input {
       width: 303px;
       height: 50px;
@@ -17,5 +20,11 @@
       border-radius: 5px;
       padding-left: 20px;
     }
+  }
+}
+
+#consiltationMain {
+  label {
+    color: red;
   }
 }

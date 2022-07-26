@@ -18,6 +18,9 @@
   form {
     padding: 0 auto;
     margin: 0 auto;
+    label {
+      color: black;
+    }
   }
   &__title {
     font-weight: 700;
@@ -46,7 +49,16 @@
     min-height: 140px;
     padding-top: 60px;
   }
+  .error {
+    border: 1px solid red;
+  }
+  label.error {
+    border: none;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
+
 #consultation,
 #order,
 #thanks {
