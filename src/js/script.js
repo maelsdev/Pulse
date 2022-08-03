@@ -100,4 +100,25 @@ $(document).ready(function () {
   validateForms("#order form");
 
   $('input[name=phone]').mask("+380 (99) 999-99-99");
+
+
+  $('form').submit(function (e) { 
+    e.preventDefault();
+
+    if (!$(this).valid()) { 
+      return;
+    }
+
+    $.ajax({
+      type: "$POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function () { 
+      $(this).find("input").value("");
+
+
+      $("form").trigger("reset");
+    });
+    return false;
+  })
 });
